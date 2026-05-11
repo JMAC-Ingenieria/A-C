@@ -2,21 +2,27 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Biblioteca | Recursos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca | STUDENT CORE</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
+    <nav id="navbar">
         <div class="logo">STUDENT<span>CORE</span></div>
-        <ul>
+        <ul class="nav-links">
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="biblioteca.html">Biblioteca</a></li>
+            <li><a href="biblioteca.html" class="active">Biblioteca</a></li>
             <li><a href="resistencia.html">Resistencia</a></li>
         </ul>
     </nav>
 
-    <div class="container">
-        <h1>Biblioteca Digital</h1>
+    <main class="container">
+        <h1 style="text-align: center; margin-bottom: 20px;">Biblioteca Digital</h1>
+        
+        <div class="search-container">
+            <input type="text" id="searchInput" class="search-input" placeholder="🔍 Buscar documentos, normas o planillas...">
+        </div>
+
         <table>
             <thead>
                 <tr>
@@ -29,15 +35,17 @@
                 <tr>
                     <td>Resumen ACI 318-19</td>
                     <td>Normativa</td>
-                    <td><a href="#" class="btn" style="padding: 5px 10px;">Ver Apuntes</a></td>
+                    <td><a href="#" class="btn">Ver Apuntes</a></td>
                 </tr>
                 <tr>
                     <td>Tablas de Dosificación</td>
                     <td>Materiales</td>
-                    <td><a href="#" class="btn" style="padding: 5px 10px;">Excel</a></td>
+                    <td><a href="#" class="btn">Excel</a></td>
                 </tr>
             </tbody>
         </table>
-    </div>
+    </main>
+
+    <script src="main.js"></script>
 </body>
 </html>
