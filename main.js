@@ -53,4 +53,22 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+    // 4. Menú Hamburguesa para Móviles
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            // Activa o desactiva la clase que muestra el menú
+            navLinks.classList.toggle('active');
+        });
+
+        // Opcional: Cerrar el menú al tocar un enlace
+        const links = document.querySelectorAll('.nav-links li a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    }
 });
