@@ -1,28 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. Efecto en la barra de navegación al hacer scroll
+    // 1. Efecto en la barra de navegación al hacer scroll (CORREGIDO Y PROTEGIDO)
     const navbar = document.getElementById('navbar');
     
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
+    if (navbar) { // Esto evita el error si alguna vez falta el navbar en un HTML
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    }
 
     // 2. Animaciones de Intersección (Aparecer al hacer scroll)
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.15 // El elemento aparece cuando el 15% es visible
+        threshold: 0.15 
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                observer.unobserve(entry.target); // Dejar de observar una vez visible
+                observer.unobserve(entry.target); 
             }
         });
     }, observerOptions);
@@ -31,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
     animatedElements.forEach(el => observer.observe(el));
 
     // 3. Sistema de Filtrado/Búsqueda (Para Biblioteca y Resistencia)
-    // Para usar esto, añade un <input type="text" id="searchInput" class="search-input" placeholder="Buscar norma o ensayo..."> en tu HTML
     const searchInput = document.getElementById('searchInput');
     
     if (searchInput) {
@@ -53,17 +54,16 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
     // 4. Menú Hamburguesa para Móviles
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
 
     if (hamburger && navLinks) {
         hamburger.addEventListener('click', () => {
-            // Activa o desactiva la clase que muestra el menú
             navLinks.classList.toggle('active');
         });
 
-        // Opcional: Cerrar el menú al tocar un enlace
         const links = document.querySelectorAll('.nav-links li a');
         links.forEach(link => {
             link.addEventListener('click', () => {
