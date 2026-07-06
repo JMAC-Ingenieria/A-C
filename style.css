@@ -2,12 +2,12 @@
    VARIABLES - NUEVA PALETA AZUL Y PLOMO
 ========================================= */
 :root {
-    --fondo-oscuro: #111827; /* Plomo muy oscuro (casi negro) */
-    --tarjeta-bg: #1f2937;   /* Plomo medio para tarjetas */
-    --acento: #3b82f6;       /* Azul ingeniería vibrante */
+    --fondo-oscuro: #111827; 
+    --tarjeta-bg: #1f2937;   
+    --acento: #3b82f6;       
     --acento-glow: rgba(59, 130, 246, 0.4);
-    --texto-principal: #f3f4f6; /* Blanco humo */
-    --texto-secundario: #9ca3af; /* Gris plomo claro */
+    --texto-principal: #f3f4f6; 
+    --texto-secundario: #9ca3af; 
     --transicion: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -27,7 +27,7 @@ body {
 }
 
 /* =========================================
-   CORRECCIÓN GLOBAL DE ENLACES (Adiós morado)
+   CORRECCIÓN GLOBAL DE ENLACES
 ========================================= */
 a {
     color: var(--acento);
@@ -36,7 +36,7 @@ a {
 }
 
 a:visited {
-    color: var(--acento); /* Fuerza a que los visitados sigan siendo azules */
+    color: var(--acento); 
 }
 
 /* =========================================
@@ -123,7 +123,7 @@ nav a:hover::after, nav a.active::after { width: 100%; }
     text-shadow: 0 0 20px var(--acento-glow);
 }
 
-.container { padding: 120px 10% 80px 10%; } /* Ajuste de padding superior para que el nav no tape el contenido */
+.container { padding: 120px 10% 80px 10%; } 
 
 /* =========================================
    BOTONES
@@ -132,7 +132,7 @@ nav a:hover::after, nav a.active::after { width: 100%; }
     display: inline-block;
     padding: 0.8rem 2rem;
     background: var(--acento);
-    color: #ffffff !important; /* Texto siempre blanco en el botón */
+    color: #ffffff !important; 
     text-decoration: none;
     border-radius: 8px;
     font-weight: 700;
@@ -140,17 +140,17 @@ nav a:hover::after, nav a.active::after { width: 100%; }
     border: 2px solid var(--acento);
 }
 
-.btn:visited { color: #ffffff !important; } /* Evita que el botón se ponga morado */
+.btn:visited { color: #ffffff !important; } 
 
 .btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px var(--acento-glow);
-    background: #2563eb; /* Un azul un poco más oscuro al pasar el mouse */
+    background: #2563eb; 
     border-color: #2563eb;
 }
 
 /* =========================================
-   TABLAS (Arreglo para que no se vea pegado)
+   TABLAS 
 ========================================= */
 table {
     width: 100%;
@@ -163,13 +163,13 @@ table {
 }
 
 th, td {
-    padding: 1.5rem; /* Aquí le damos mucho espacio para que respire */
+    padding: 1.5rem; 
     text-align: left;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 th {
-    background: rgba(59, 130, 246, 0.15); /* Fondo azul claro plomizo */
+    background: rgba(59, 130, 246, 0.15); 
     color: var(--acento);
     font-weight: 600;
     text-transform: uppercase;
@@ -180,7 +180,6 @@ th {
 tr:last-child td { border-bottom: none; }
 tr:hover td { background: rgba(255, 255, 255, 0.02); }
 
-/* Ajuste específico para botones dentro de tablas */
 td .btn {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
@@ -245,7 +244,7 @@ details[open] summary::after {
 }
 
 .contenido-desplegable ul li a {
-    color: var(--texto-secundario) !important; /* Gris plomo claro */
+    color: var(--texto-secundario) !important; 
     text-decoration: none;
     display: block;
     position: relative;
@@ -254,7 +253,7 @@ details[open] summary::after {
 }
 
 .contenido-desplegable ul li a:visited {
-    color: var(--texto-secundario) !important; /* Adiós al morado en enlaces visitados */
+    color: var(--texto-secundario) !important; 
 }
 
 .contenido-desplegable ul li a::before {
@@ -265,7 +264,7 @@ details[open] summary::after {
 }
 
 .contenido-desplegable ul li a:hover {
-    color: var(--texto-principal) !important; /* Blanco al pasar el mouse */
+    color: var(--texto-principal) !important; 
     padding-left: 2rem;
 }
 
@@ -275,7 +274,7 @@ details[open] summary::after {
 }
 
 .contenido-desplegable ul li a:hover strong {
-    color: var(--acento); /* El título se pone azul al pasar el mouse */
+    color: var(--acento); 
 }
 
 /* =========================================
@@ -304,6 +303,7 @@ details[open] summary::after {
     border-color: var(--acento);
     box-shadow: 0 0 15px var(--acento-glow);
 }
+
 /* =========================================
    DISEÑO RESPONSIVO (MÓVILES)
 ========================================= */
@@ -322,18 +322,17 @@ details[open] summary::after {
     transition: var(--transicion);
 }
 
-/* Cuando la pantalla es menor a 768px (Teléfonos y Tablets) */
 @media (max-width: 768px) {
     .hamburger {
-        display: flex; /* Mostramos el icono de 3 rayitas */
+        display: flex; 
     }
 
     .nav-links {
         position: absolute;
         top: 100%;
-        left: -100%; /* Escondemos el menú a la izquierda de la pantalla */
+        left: -100%; 
         width: 100%;
-        background: rgba(17, 24, 39, 0.95); /* Fondo plomo oscuro con cristal */
+        background: rgba(17, 24, 39, 0.95); 
         backdrop-filter: blur(10px);
         flex-direction: column;
         text-align: center;
@@ -342,7 +341,6 @@ details[open] summary::after {
         box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
 
-    /* Esta clase la activará el JavaScript para que el menú aparezca */
     .nav-links.active {
         left: 0; 
     }
@@ -351,7 +349,6 @@ details[open] summary::after {
         gap: 2rem;
     }
 
-    /* Achicamos el título en celulares para que no ocupe toda la pantalla */
     .hero h1 {
         font-size: 2.5rem;
     }
