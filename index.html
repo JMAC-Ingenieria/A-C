@@ -4,17 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingeniería Portal | STUDENT CORE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Fondo interactivo Low-Poly -->
+    <canvas id="mesh-canvas"></canvas>
+
     <nav id="navbar">
         <div class="logo">STUDENT<span>CORE</span></div>
         <ul class="nav-links">
             <li><a href="index.html" class="active">Inicio</a></li>
             <li><a href="biblioteca.html">Biblioteca</a></li>
             <li><a href="resistencia.html">Resistencia</a></li>
-            <li><a href="Cañadeazucar.html">Caña de azucar</a></li>
-            <li><a href="rsl.html" class="active">RSL </a></li>
+            <li><a href="Cañadeazucar.html">Caña de azúcar</a></li>
+            <li><a href="rsl.html">RSL</a></li>
         </ul>
         <div class="hamburger">
             <span></span><span></span><span></span>
@@ -23,6 +29,10 @@
 
     <header class="hero">
         <div class="hero-content fade-in">
+            <div class="hero-badge">
+                <span class="pulse-dot"></span>
+                ECOSISTEMA DE INGENIERÍA CIVIL
+            </div>
             <h1><span>Ingeniería</span></h1>
             <p>Documentación técnica, normas ACI, modelado estructural y análisis de nuevos materiales en un solo ecosistema.</p>
             <div class="hero-buttons">
@@ -33,26 +43,56 @@
     </header>
 
     <main class="container" id="objetivos">
-        <h2 class="section-title fade-in">Áreas de Enfoque</h2>
+        <div class="section-header fade-in">
+            <span class="section-tag">// MÓDULOS PRINCIPALES</span>
+            <h2 class="section-title">Áreas de Enfoque</h2>
+        </div>
+
         <div class="grid">
             <div class="card slide-up">
-                <div class="card-icon">🏗️</div>
+                <div class="card-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        <path d="M2 17l10 5 10-5"/>
+                        <path d="M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
                 <h3>Diseño y Modelado</h3>
                 <p>Memorias de cálculo, rutinas en Mathcad para dimensionamiento, y modelos exportados entre SAP2000, Revit y AutoCAD.</p>
             </div>
+
             <div class="card slide-up">
-                <div class="card-icon">🧪</div>
+                <div class="card-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 3h6"/>
+                        <path d="M10 3v6.5L4.5 19a2 2 0 0 0 1.7 3h11.6a2 2 0 0 0 1.7-3L14 9.5V3"/>
+                        <path d="M8.5 14h7"/>
+                    </svg>
+                </div>
                 <h3>Laboratorio e Investigación</h3>
                 <p>Registros de ensayos de compresión, calcinación y análisis de materiales sostenibles como ceniza de bagazo y quitosano.</p>
             </div>
+
             <div class="card slide-up">
-                <div class="card-icon">📐</div>
-                <h3>Normativa ACI & ASTM</h3>
+                <div class="card-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                        <line x1="8" y1="13" x2="16" y2="13"/>
+                        <line x1="8" y1="17" x2="13" y2="17"/>
+                    </svg>
+                </div>
+                <h3>Normativa ACI &amp; ASTM</h3>
                 <p>Acceso rápido a los requerimientos del ACI 318-19 y protocolos de control de calidad del hormigón.</p>
             </div>
         </div>
     </main>
 
+    <footer class="footer">
+        <p>STUDENT<span>CORE</span> &bull; Portal Técnico de Ingeniería</p>
+    </footer>
+
     <script src="main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
